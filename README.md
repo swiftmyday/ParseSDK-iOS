@@ -15,7 +15,7 @@ In order to install the parse iOS SDK into your iOS application, just follow the
 1. Open Xcode > File > Add packages...
 2. Add the following package URL:
   ```
-  https://github.com/parse-community/Parse-SDK-iOS-OSX
+  https://github.com/swiftmyday/ParseSDK-iOS.git
   ```
 4. Make sure your project, and target are selected
 5. Select Parse, ParseUI, and ParseLiveQuery
