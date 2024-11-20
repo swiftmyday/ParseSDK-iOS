@@ -6,8 +6,6 @@ Parse iOS SDK to interact with the <b>SwiftMyDay Parse Server</b>  from here [Sw
 
 Thanks to all the team behind the [Parse iOS SDK](https://github.com/parse-community/Parse-SDK-iOS-OSX) for making this amazing project.
 
-
-
 # Getting started
 
 In order to install the parse iOS SDK into your iOS application, just follow these simple steps:
