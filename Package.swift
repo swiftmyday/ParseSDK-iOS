@@ -19,8 +19,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/parse-community/Bolts-ObjC.git", from: "1.10.0"),
         .package(url: "https://github.com/BoltsFramework/Bolts-Swift.git", from: "1.5.0"),
-        .package(url: "https://github.com/daltoniam/Starscream.git", from: "4.0.8"),
-        .package(name: "OCMock", url: "https://github.com/erikdoe/ocmock.git", .revision("2c0bfd373289f4a7716db5d6db471640f91a6507"))
+        .package(url: "https://github.com/daltoniam/Starscream.git", from: "4.0.8")
     ],
     targets: [
         .target(
@@ -127,7 +126,14 @@ let package = Package(
             exclude: ["Resources/Info-iOS.plist"],
             resources: [.process("Resources")],
             publicHeadersPath: "Source",
-            cSettings: [.headerSearchPath("Internal/**")]
+            cSettings: [.headerSearchPath("Internal"),
+                        .headerSearchPath("Internal/Extensions"),
+                        .headerSearchPath("Internal/Source"),
+                        .headerSearchPath("Internal/Views"),
+                        .headerSearchPath("Internal/Views/Buttons"),
+                        .headerSearchPath("Internal/Cells"),
+                        .headerSearchPath("Internal/Sign\\ In\\ With\\ Apple"),
+                        .headerSearchPath("Source")]
         ),
         .target(
             name: "ParseLiveQuery",
