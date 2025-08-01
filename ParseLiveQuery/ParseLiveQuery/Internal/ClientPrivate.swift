@@ -173,7 +173,9 @@ extension Client: WebSocketDelegate {
         case .pong(_):
             if shouldPrintWebSocketLog { NSLog("ParseLiveQuery: Received pong but we don't handle it...") }
         case .ping(_):
-            if shouldPrintWebSocketLog { NSLog("ParseLiveQuery: Received ping but we don't handle it...") }
+            if shouldPrintWebSocketLog {
+                NSLog("ParseLiveQuery: Received ping but we don't handle it...")
+            }
         }
     }
 }

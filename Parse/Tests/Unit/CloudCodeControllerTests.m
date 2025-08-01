@@ -9,7 +9,7 @@
 
 #import <OCMock/OCMock.h>
 
-@import Bolts;
+@import Bolts.BFTask;
 
 #import "OCMock+Parse.h"
 #import "PFCloudCodeController.h"

@@ -21,7 +21,7 @@
 
 import UIKit
 
-import ParseCore
+import Parse
 import ParseUI
 
 enum UIDemoType : Int {
@@ -30,6 +30,8 @@ enum UIDemoType : Int {
     case LogInPasswordForgotten
     case LogInDone
     case LogInEmailAsUsername
+    case LogInFacebook
+    case LogInFacebookAndTwitter
     case LogInAll
     case LogInAllNavigation
     case LogInCustomizedLogoAndBackground
@@ -79,6 +81,10 @@ extension UIDemoType : CustomStringConvertible {
             return "Log In Done Button"
         case .LogInEmailAsUsername:
             return "Log In Email as Username"
+        case .LogInFacebook:
+            return "Log In Facebook"
+        case .LogInFacebookAndTwitter:
+            return "Log In Facebook and Twitter"
         case .LogInAll:
             return "Log In All"
         case .LogInAllNavigation:
@@ -195,10 +201,20 @@ extension UIDemoViewController {
                 logInViewController.fields = [.usernameAndPassword, .logInButton, .signUpButton, .dismissButton]
                 logInViewController.emailAsUsername = true
                 present(logInViewController, animated: true, completion: nil)
+            case .LogInFacebook:
+                let logInViewController = PFLogInViewController()
+                logInViewController.delegate = self
+                logInViewController.fields = [.usernameAndPassword, .facebook, .dismissButton]
+                present(logInViewController, animated: true, completion: nil)
+            case .LogInFacebookAndTwitter:
+                let logInViewController = PFLogInViewController()
+                logInViewController.delegate = self
+                logInViewController.fields = [.facebook, .twitter, .dismissButton]
+                present(logInViewController, animated: true, completion: nil)
             case .LogInAll:
                 let logInViewController = PFLogInViewController()
                 logInViewController.delegate = self
-                logInViewController.fields = [.usernameAndPassword, .passwordForgotten, .logInButton, .signUpButton, .dismissButton]
+                logInViewController.fields = [.usernameAndPassword, .passwordForgotten, .logInButton, .facebook, .twitter, .signUpButton, .dismissButton]
                 if let signUpController = logInViewController.signUpController {
                     signUpController.delegate = self
                     signUpController.fields = [.usernameAndPassword, .email, .additional, .signUpButton, .dismissButton]
@@ -207,7 +223,7 @@ extension UIDemoViewController {
             case .LogInAllNavigation:
                 let logInViewController = PFLogInViewController()
                 logInViewController.delegate = self
-                logInViewController.fields = [.usernameAndPassword, .passwordForgotten, .logInButton, .signUpButton, .dismissButton]
+                logInViewController.fields = [.usernameAndPassword, .passwordForgotten, .logInButton, .facebook, .twitter, .signUpButton, .dismissButton]
                 if let signUpViewController = logInViewController.signUpController {
                     signUpViewController.delegate = self
                     signUpViewController.fields = [.usernameAndPassword, .email, .additional, .signUpButton, .dismissButton]
@@ -216,7 +232,7 @@ extension UIDemoViewController {
             case .LogInCustomizedLogoAndBackground:
                 let logInViewController = CustomLogInViewController()
                 logInViewController.delegate = self
-                logInViewController.fields = [.default]
+                logInViewController.fields = [.default, .facebook, .twitter]
 
                 let signUpViewController = CustomSignUpViewController()
                 signUpViewController.delegate = self

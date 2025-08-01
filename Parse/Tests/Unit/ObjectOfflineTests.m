@@ -7,7 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-@import Bolts;
+@import Bolts.BFTask;
 
 #import "PFObject.h"
 #import "PFOfflineStore.h"

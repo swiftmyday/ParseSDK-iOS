@@ -202,6 +202,8 @@
 - (void)setHasBeenFetched:(BOOL)fetched;
 - (void)_setDeleted:(BOOL)deleted;
 
+- (BOOL)isDataAvailableForKey:(NSString *)key;
+
 - (BOOL)_hasChanges;
 - (BOOL)_hasOutstandingOperations;
 - (PFOperationSet *)unsavedChanges;

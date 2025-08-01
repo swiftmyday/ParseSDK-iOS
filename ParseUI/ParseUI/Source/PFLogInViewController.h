@@ -20,10 +20,15 @@
  */
 
 #import <UIKit/UIKit.h>
+
+#if __has_include(<Parse/PFConstants.h>)
+#import <Parse/PFConstants.h>
+#else
+//#import "PFConstants.h"
+#endif
+
 #import "ParseUIConstants.h"
 #import "PFLogInView.h"
-
-@import ParseCore;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -67,6 +72,13 @@ NS_ASSUME_NONNULL_BEGIN
  @see PFLogInViewControllerDelegate
  */
 @property (nullable, nonatomic, weak) id<PFLogInViewControllerDelegate> delegate;
+
+/**
+ The facebook permissions that Facebook log in requests for.
+
+ If unspecified, the default is basic facebook permissions.
+ */
+@property (nullable, nonatomic, copy) NSArray<NSString *> *facebookPermissions;
 
 /**
  The sign up controller if sign up is enabled.

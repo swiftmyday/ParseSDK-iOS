@@ -27,7 +27,11 @@
 #import "BFTask.h"
 #endif
 
-@import ParseCore;
+#if __has_include(<Parse/PFObject.h>)
+#import <Parse/PFObject.h>
+#else
+#import "PFObject.h"
+#endif
 
 @interface DeletionCollectionViewController() <UIAlertViewDelegate>
 

@@ -20,9 +20,14 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "ParseUIConstants.h"
 
-@import ParseCore;
+#if __has_include(<Parse/PFConstants.h>)
+#import <Parse/PFConstants.h>
+#else
+#import "PFConstants.h"
+#endif
+
+#import "ParseUIConstants.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

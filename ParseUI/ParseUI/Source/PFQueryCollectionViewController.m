@@ -29,7 +29,11 @@
 #import "BFTaskCompletionSource.h"
 #endif
 
-@import ParseCore;
+#if __has_include(<Parse/Parse.h>)
+#import <Parse/Parse.h>
+#else
+#import "Parse.h"
+#endif
 
 #import "PFActivityIndicatorCollectionReusableView.h"
 #import "PFCollectionViewCell.h"

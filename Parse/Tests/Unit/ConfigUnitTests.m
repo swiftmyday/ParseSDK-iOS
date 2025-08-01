@@ -9,7 +9,7 @@
 
 #import <OCMock/OCMock.h>
 
-@import Bolts;
+@import Bolts.BFTask;
 
 #import "PFConfigController.h"
 #import "PFConfig_Private.h"

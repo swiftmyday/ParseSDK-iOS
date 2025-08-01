@@ -20,11 +20,20 @@
         }
       },
       {
-        "package": "OCMock",
-        "repositoryURL": "https://github.com/erikdoe/ocmock",
+        "package": "Facebook",
+        "repositoryURL": "https://github.com/facebook/facebook-ios-sdk.git",
         "state": {
           "branch": null,
-          "revision": "2c0bfd373289f4a7716db5d6db471640f91a6507",
+          "revision": "7fd8a930a5b2c940a22efafe0e214ed0df671312",
+          "version": "15.1.0"
+        }
+      },
+      {
+        "package": "OCMock",
+        "repositoryURL": "https://github.com/erikdoe/ocmock.git",
+        "state": {
+          "branch": null,
+          "revision": "67bb9602f0a7541f24dc2d6d0d7389ca3e4c2c89",
           "version": null
         }
       },
@@ -33,8 +42,8 @@
         "repositoryURL": "https://github.com/daltoniam/Starscream.git",
         "state": {
           "branch": null,
-          "revision": "c6bfd1af48efcc9a9ad203665db12375ba6b145a",
-          "version": "4.0.8"
+          "revision": "ac6c0fc9da221873e01bd1a0d4818498a71eef33",
+          "version": "4.0.6"
         }
       }
     ]

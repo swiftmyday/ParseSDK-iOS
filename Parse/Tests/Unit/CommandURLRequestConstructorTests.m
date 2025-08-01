@@ -155,7 +155,6 @@
     XCTAssertNotNil(headers[PFCommandHeaderNameOSVersion]);
     XCTAssertNotNil(headers[PFCommandHeaderNameAppBuildVersion]);
     XCTAssertNotNil(headers[PFCommandHeaderNameAppDisplayVersion]);
-    XCTAssertNotNil(headers[PFCommandHeaderNameRequestId]);
 }
 
 - (void)testBailOnEncodingError {

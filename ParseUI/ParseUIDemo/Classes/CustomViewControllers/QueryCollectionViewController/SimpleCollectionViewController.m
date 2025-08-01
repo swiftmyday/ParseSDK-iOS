@@ -20,9 +20,14 @@
  */
 
 #import "SimpleCollectionViewController.h"
-#import "PFCollectionViewCell.h"
 
-@import ParseCore;
+#if __has_include(<Parse/PFQuery.h>)
+#import <Parse/PFQuery.h>
+#else
+#import "PFQuery.h"
+#endif
+
+#import "PFCollectionViewCell.h"
 
 @implementation SimpleCollectionViewController
 

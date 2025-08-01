@@ -21,7 +21,7 @@
 
 import UIKit
 
-import ParseCore
+import Parse
 import ParseUI
 
 class CustomSignUpViewController: PFSignUpViewController {

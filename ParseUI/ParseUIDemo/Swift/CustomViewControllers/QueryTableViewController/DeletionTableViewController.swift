@@ -8,10 +8,10 @@
 
 import UIKit
 
-import ParseCore
+import Parse
 import ParseUI
 
-import BoltsSwift
+import Bolts.BFTask
 
 class DeletionTableViewController: PFQueryTableViewController, UIAlertViewDelegate {
 

@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@import ParseCore;
+#if __has_include(<Parse/PFUserAuthenticationDelegate.h>)
+#import <Parse/PFUserAuthenticationDelegate.h>
+#else
+#import "PFUserAuthenticationDelegate.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

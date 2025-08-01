@@ -26,12 +26,16 @@
 #import <Bolts/BFTask.h>
 #import <Bolts/BFTaskCompletionSource.h>
 #else
-#import "PFConstants.h"
+//#import "PFConstants.h"
 #import "BFTask.h"
 #import "BFTaskCompletionSource.h"
 #endif
 
-@import ParseCore;
+#if __has_include(<Parse/Parse.h>)
+#import <Parse/Parse.h>
+#else
+#import "Parse.h"
+#endif
 
 #import "PFActivityIndicatorTableViewCell.h"
 #import "PFImageView.h"
